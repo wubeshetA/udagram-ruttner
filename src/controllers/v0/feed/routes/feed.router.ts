@@ -16,7 +16,12 @@ router.get('/', async (req: Request, res: Response) => {
     res.send(items);
 });
 
-//@TODO : route to get Feed item by id
+//@TODO : route to get FeedItem by id
+router.get('/:id', async (req: Request, res: Response) => {
+    let { id } = req.params;
+    const item = await FeedItem.findByPk(id);
+    res.status(200).send(item);
+});
 
 // update a specific resource
 router.patch('/:id',   
