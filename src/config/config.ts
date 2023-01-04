@@ -1,13 +1,13 @@
 export const config = {
   "dev": {
-    "username": "udagram",
-    "password": "abebesobela",
-    "database": "udagram",
-    "host": "udagram3.cyqd2cjlcqmu.us-east-1.rds.amazonaws.com",
+    "username": process.env.POSTGRESS_USERNAME, 
+    "password": process.env.POSTGRESS_PASSWORD, 
+    "database": process.env.POSTGRESS_DATABASE, 
+    "host": process.env.POSTGRESS_HOST,
     "dialect": "postgres",
-    "aws_region": "us-east-2",
+    "aws_region": "us-east-1",
     "aws_profile": "default",
-    "aws_media_bucket": "udagram-ruttner"
+    "aws_media_bucket": "udagram-ruttner-wube-dev"
   },
   "jwt": {
     "secret": "randomjwtsecret"
